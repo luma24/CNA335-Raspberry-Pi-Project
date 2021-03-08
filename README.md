@@ -1,1 +1,1 @@
-# CNA335-Setup-Pi-hole-on-a-Raspberry-Pi-
+# Setting up Pi-hole on a Raspberry Pi.
