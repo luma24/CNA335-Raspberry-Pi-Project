@@ -1,3 +1,4 @@
+# CNA330 Raspberry-Pi Final Project
 ## What is a Pi-hole?
 Pi-hole is a network-wide ad blocker.
 I will install and set up a Pi-hole on Raspberry Pi to block advertisements on all devices connected to my home network.
@@ -11,6 +12,30 @@ Pi-hole will intercept any queries for known ad-serving domains and deny them ac
 - Raspberry Pi Zero W with Raspbian Lite image installed on it.
 
 ## Setting up Pi-hole on a Raspberry Pi. 
+### First update and upgrade your pi by running these commands:
+```
+sudo apt-get update
+sudo apt-get upgrade
+```
+### It might you need curl tool, to install it:
+```
+sudo apt-get install curl
+```
+## To install Pi-hole, run this command:
+```
+curl -sSL https://install.pi-hole.net | bash
+```
+### Follow this instruction to finish the installation: (press enter to continue)
+
+                               │Pi-hole automated installer                                         │ 
+                               │This installer will transform your device into a network-wide       |
+                               | ad blocker!                                                        |
+                               |                                                                    │ 
+                               │                                                                    │ 
+                               │                              <Ok>                                  |
+                               └────────────────────────────────────────────────────────────────────┘   
+### Press enter to continue
+  
                                                                    
                                │ The Pi-hole is free, but powered by your donations:                │ 
                                │ https://pi-hole.net/donate/                                        │ 
@@ -20,10 +45,10 @@ Pi-hole will intercept any queries for known ad-serving domains and deny them ac
                                │                                                                    │ 
                                │                                                                    │ 
                                │                                                                    │ 
-                               │                                                                    |  
+                               │                          <Ok>                                      |  
                                └────────────────────────────────────────────────────────────────────┘ 
-                                                          <Ok>
-##
+                                                          
+### Pi-hole server needs a STATIC IP ADDRES, hit enter to continue
 
 
                                                       Static IP Needed 
@@ -41,7 +66,7 @@ Pi-hole will intercept any queries for known ad-serving domains and deny them ac
                                │                               <Ok>                                 │ 
                                │                                                                    │  
                                └────────────────────────────────────────────────────────────────────┘ 
-## 
+### Here I will select Google (ECS) as a Upstream DNS Provider
 
                                
                                |Select Upstream DNS Provider. To use your own, select Custom.       |
@@ -54,7 +79,7 @@ Pi-hole will intercept any queries for known ad-serving domains and deny them ac
                                
                                
                                
-##
+### Hit enter to continue
                                  Pi-hole relies on third party lists in order to block ads.         │ 
                                │                                                                    │ 
                                │ You can use the suggestion below, and/or add your own after        │ 
@@ -69,7 +94,7 @@ Pi-hole will intercept any queries for known ad-serving domains and deny them ac
                                │                 <Ok>                     <Cancel>                  │  
                                └────────────────────────────────────────────────────────────────────┘ 
   
-  ##
+### Select the protocol and hit the enter
                                 Select Protocols (press space to toggle selection)                  │ 
                                │                                                                    │ 
                                │    [*] IPv4  Block ads over IPv4                                   │ 
@@ -82,7 +107,7 @@ Pi-hole will intercept any queries for known ad-serving domains and deny them ac
                                │                 <Ok>                     <Cancel>                  │ 
                                │                                                                    │ 
                                └────────────────────────────────────────────────────────────────────┘ 
-##
+### Here I will use this Ip Address
                                                                    
                                │ Do you want to use your current network settings as a static       │ 
                                │ address?                                                           │ 
@@ -93,7 +118,7 @@ Pi-hole will intercept any queries for known ad-serving domains and deny them ac
                                │                                                                    │ 
                                │                  <Yes>                     <No>                    │ 
                                └────────────────────────────────────────────────────────────────────┘ 
-## 
+### This is an IP Conflict warning 
 
                                                     FYI: IP Conflict 
                                │                                                                    │ 
@@ -113,10 +138,8 @@ Pi-hole will intercept any queries for known ad-serving domains and deny them ac
                                
                                
                               
-## 
-  
-                   
-                   
+### Install the web admin interface, click enter to continue 
+
                                |  Do you wish to install the web admin interface?                   │ 
                                │                                                                    │ 
                                │    (*) On (Recommended)                                            │ 
@@ -129,7 +152,7 @@ Pi-hole will intercept any queries for known ad-serving domains and deny them ac
                                │                 <Ok>                     <Cancel>                  │   
                                └────────────────────────────────────────────────────────────────────┘ 
                                
-##
+### Install the web server
                                │ Do you wish to install the web server (lighttpd) and required PHP  │ 
                                │ modules?                                                           │ 
                                │                                                                    │ 
@@ -146,7 +169,7 @@ Pi-hole will intercept any queries for known ad-serving domains and deny them ac
                                │                 <Ok>                     <Cancel>                  │ 
                                │                                                                    │ 
                                └────────────────────────────────────────────────────────────────────┘ 
-##
+### log queries on
                                            Do you want to log queries?                              │ 
                                │                                                                    │ 
                                │    (*) On (Recommended)                                            │ 
@@ -158,7 +181,7 @@ Pi-hole will intercept any queries for known ad-serving domains and deny them ac
                                │                                                                    │ 
                                │                 <Ok>                     <Cancel>                  │    
                                └────────────────────────────────────────────────────────────────────┘ 
-##
+### Here I will select ``` show everything```, and hit enter to continue
                                  Select a privacy mode for FTL.                                     │ 
                                │ https://docs.pi-hole.net/ftldns/privacylevels/                     │ 
                                │                                                                    │ 
@@ -172,7 +195,7 @@ Pi-hole will intercept any queries for known ad-serving domains and deny them ac
                                │                                                                    │ 
                                │                 <Ok>                     <Cancel>                  │   
                                └────────────────────────────────────────────────────────────────────┘ 
-##
+### Installation Complete, click enter
                                                   Installation Complete! 
                                │                                                                    │ 
                                │ Configure your devices to use the Pi-hole as their DNS server      │ 
@@ -193,14 +216,15 @@ Pi-hole will intercept any queries for known ad-serving domains and deny them ac
                                │                               <Ok>                                 │ 
                                │                                                                    │ 
                                └────────────────────────────────────────────────────────────────────┘ 
-                                                                                                      
-## To login to the Pi-hole, on a browser search
+###  After finish the installation, login to the Pi-hole                                                                                                    
+### To login to the Pi-hole, on a browser search, then login using you Pi password
 (use your Pi Ip address):
 ```
 http://192.168.1.7/admin
 ```
-## Add more Adlist sources
-After you login to the Pi-hole Go to setting >> Adlist > group management pages
+
+### Also you can add more Adlist sources
+After you login to the Pi-hole Go to``` setting ```> ```Adlist ```> ```group management pages```
 Add these Addresses and then run pihole -g or or update your gravity list online after modifying the adlists. 
 ```
 mobile.pipe.aria.microsoft.com
