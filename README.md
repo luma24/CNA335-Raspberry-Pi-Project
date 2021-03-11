@@ -201,8 +201,8 @@ http://192.168.1.7/admin
 ```
 ## Add more Adlist sources
 mobile.pipe.aria.microsoft.com
-
-
+www.youtube-nocookie.com
+ssl.google-analytics.com
 ## Project Sources:
 https://blog.cryptoaustralia.org.au/instructions-for-setting-up-pi-hole/
 
