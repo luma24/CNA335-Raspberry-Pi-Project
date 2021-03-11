@@ -194,3 +194,14 @@ Pi-hole will intercept any queries for known ad-serving domains and deny them ac
                                │                                                                    │ 
                                └────────────────────────────────────────────────────────────────────┘ 
                                                                                                       
+## To login to the Pi-hole, on a browser search(use your Pi Ip address):
+```
+http://192.168.1.7/admin
+```
+## Add more Adlist sources
+mobile.pipe.aria.microsoft.com
+
+
+## Project Sources:
+https://blog.cryptoaustralia.org.au/instructions-for-setting-up-pi-hole/
+https://javan.de/pihole-dns-blocklists-adlists-auto-updater/
