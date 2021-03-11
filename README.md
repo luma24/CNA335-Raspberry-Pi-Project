@@ -11,7 +11,7 @@ Pi-hole will intercept any queries for known ad-serving domains and deny them ac
 - Raspberry Pi Zero W with Raspbian Lite image installed on it.
 
 ## Setting up Pi-hole on a Raspberry Pi. 
-                                                                   │ 
+                                                                   
                                │ The Pi-hole is free, but powered by your donations:                │ 
                                │ https://pi-hole.net/donate/                                        │ 
                                │                                                                    │ 
@@ -22,7 +22,7 @@ Pi-hole will intercept any queries for known ad-serving domains and deny them ac
                                │                                                                    │ 
                                │                                                                    |  
                                └────────────────────────────────────────────────────────────────────┘ 
-                               │                               <Ok>
+                                                          <Ok>
 ##
 
 
@@ -117,7 +117,7 @@ Pi-hole will intercept any queries for known ad-serving domains and deny them ac
   
                    
                    
-              |                |  Do you wish to install the web admin interface?                   │ 
+                               |  Do you wish to install the web admin interface?                   │ 
                                │                                                                    │ 
                                │    (*) On (Recommended)                                            │ 
                                │    ( ) Off                                                         │ 
