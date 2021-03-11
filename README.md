@@ -200,9 +200,13 @@ Pi-hole will intercept any queries for known ad-serving domains and deny them ac
 http://192.168.1.7/admin
 ```
 ## Add more Adlist sources
+After you login to the Pi-hole Go to setting >> Adlist > group management pages
+Add these Addresses and then run pihole -g or or update your gravity list online after modifying the adlists. 
+```
 mobile.pipe.aria.microsoft.com
 www.youtube-nocookie.com
 ssl.google-analytics.com
+```
 ## Project Sources:
 https://blog.cryptoaustralia.org.au/instructions-for-setting-up-pi-hole/
 
