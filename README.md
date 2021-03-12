@@ -231,6 +231,13 @@ mobile.pipe.aria.microsoft.com
 www.youtube-nocookie.com
 ssl.google-analytics.com
 ```
+### Test the Pi-hole
+Tes the Pi-hole out by re-configuring an individual computer to use Pi-hole's DNS service.
+To do this, change the DNS server on the computer you want to test, to the IP address of the Pi-hole server (In my case is 192.168.1.7)
+
+### Re-configure the router 
+We can reconfigure the home router to use the Pi-hole as a DNS server.
+
 ## Project Sources:
 https://blog.cryptoaustralia.org.au/instructions-for-setting-up-pi-hole/
 
