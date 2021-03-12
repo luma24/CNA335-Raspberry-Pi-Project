@@ -9,7 +9,7 @@ ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())  # THE MISSING KEY WIL
 
 ssh.connect('192.168.1.7', username='pi', password='123456')
 
-stdin, stdout, stderr = ssh.exec_command('''sudo apt-get update ''')  # site to force the upgrade: https://itsfoss.com/update-ubuntu/
+stdin, stdout, stderr = ssh.exec_command('''sudo apt-get update ''')  
 stdin.flush()
 data = stdout.read().splitlines()
 for line in data:
